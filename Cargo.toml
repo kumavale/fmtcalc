@@ -1,0 +1,16 @@
+[package]
+name = "fmtcalc"
+version = "0.1.0"
+authors = ["kmgy"]
+edition = "2018"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/kumavale/fmtcalc"
+description = "A calculator that can be used like the println! macro of the Rust language."
+categories = ["command-line-utilities"]
+keywords = ["calculator"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dynfmt = { version = "0.1", features = ["curly"] }

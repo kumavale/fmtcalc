@@ -1,0 +1,23 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: prepare
+      run: rustup component add clippy
+
+    - name: Build
+      run: cargo build
+
+    - name: Run tests
+      run: cargo test
+
+    - name: clippy
+      run: cargo clippy --all-targets -- -W clippy::dbg_macro
+
